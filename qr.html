@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Örnek Et — Masa QR</title>
+<style>
+  /* QR her zaman beyaz zemin üstünde koyu modüllerle duruyor. Koyu temada
+     ters çevirmek cazip görünüyor ama bazı telefon kameraları ters QR
+     okumuyor, o yüzden sayfa tek renk şemasına sabitli. */
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px; background: #f4f4f2; color: #111;
+    font: 16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif;
+    display: flex; flex-wrap: wrap; gap: 28px;
+    justify-content: center; align-items: flex-start;
+  }
+  .kart {
+    background: #fff; width: 300px; max-width: 100%;
+    border-radius: 22px; padding: 26px 22px 20px; text-align: center;
+    box-shadow: 0 1px 2px #0000000f, 0 12px 32px #0000001a;
+  }
+  .kart__marka { font-size: 12px; letter-spacing: .22em; color: #8a8a86; font-weight: 600; }
+  .kart__baslik { font-size: 30px; font-weight: 700; letter-spacing: -.02em; margin-top: 2px; }
+  .kart__qr { margin: 18px auto 14px; width: 220px; }
+  .kart__qr svg { width: 100%; height: auto; display: block; }
+  .kart__cta { font-size: 15px; font-weight: 600; }
+  .kart__url { font-size: 13px; color: #8a8a86; margin-top: 3px; word-break: break-all; }
+  .kart__not {
+    font-size: 12px; line-height: 1.45; color: #6b6b66; text-align: left;
+    margin: 16px 0 0; padding-top: 14px; border-top: 1px solid #ebebe8;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .kart { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+    .kart__not { display: none; }
+  }
+</style>
+</head>
+<body>
+  <article class="kart">
+    <div class="kart__marka">ÖRNEK ET</div>
+    <div class="kart__baslik">Menü</div>
+    <div class="kart__qr"><svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 39 39" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h39v39H0z"/><path stroke="#111111" d="M1 1.5h7m3 0h1m4 0h1m2 0h1m3 0h3m1 0h1m1 0h1m1 0h7M1 2.5h1m5 0h1m5 0h2m5 0h6m1 0h1m1 0h1m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m3 0h2m2 0h2m1 0h1m3 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m2 0h2m3 0h1m1 0h4m2 0h5m3 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h3m1 0h1m2 0h3m1 0h3m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h1m2 0h2m3 0h1m1 0h3m1 0h2m1 0h1m3 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h2m1 0h1m1 0h1m2 0h1m4 0h3m3 0h2M3 9.5h2m2 0h4m1 0h1m3 0h1m3 0h3m5 0h4m1 0h1M4 10.5h3m2 0h2m2 0h1m3 0h1m1 0h1m1 0h1m2 0h3m2 0h1m2 0h1M6 11.5h3m3 0h3m4 0h1m1 0h1m1 0h4m2 0h2m1 0h3m1 0h1M4 12.5h1m1 0h1m3 0h1m1 0h1m3 0h9m1 0h2m5 0h3m1 0h1M2 13.5h1m1 0h1m1 0h5m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h3m1 0h3m1 0h1M1 14.5h1m1 0h1m2 0h1m1 0h1m1 0h3m4 0h1m1 0h4m4 0h3m1 0h1m1 0h1m1 0h3M1 15.5h2m1 0h2m1 0h2m1 0h1m1 0h1m4 0h1m2 0h1m3 0h4m2 0h1m2 0h1m1 0h2M2 16.5h1m2 0h1m4 0h1m3 0h1m3 0h3m1 0h1m2 0h1m2 0h2m1 0h3m3 0h1M1 17.5h1m3 0h1m1 0h1m1 0h1m3 0h1m1 0h1m2 0h4m1 0h2m1 0h1m3 0h1m1 0h1m1 0h2M1 18.5h1m1 0h3m3 0h2m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m1 0h1M2 19.5h1m2 0h1m1 0h1m4 0h3m1 0h2m1 0h1m1 0h2m1 0h2m1 0h4m1 0h1m3 0h2M2 20.5h2m4 0h3m1 0h3m1 0h4m1 0h2m1 0h2m1 0h3m1 0h1m2 0h1m1 0h2M4 21.5h4m1 0h1m2 0h1m1 0h3m1 0h2m3 0h1m1 0h1m1 0h1m1 0h2m2 0h1m3 0h1M2 22.5h2m4 0h5m1 0h2m2 0h2m1 0h1m1 0h1m1 0h2m5 0h1m2 0h1M1 23.5h1m2 0h2m1 0h1m3 0h1m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m6 0h1m1 0h1M4 24.5h1m1 0h1m2 0h1m1 0h2m3 0h1m1 0h2m2 0h1m1 0h1m1 0h4m4 0h3M6 25.5h3m1 0h2m1 0h2m1 0h1m1 0h2m1 0h3m6 0h2m1 0h4M3 26.5h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m5 0h1m1 0h2m2 0h5m1 0h5M2 27.5h1m4 0h1m1 0h1m1 0h1m1 0h1m1 0h7m3 0h2m9 0h1M1 28.5h1m2 0h2m3 0h1m2 0h1m1 0h1m3 0h1m1 0h2m3 0h1m1 0h4m1 0h1m3 0h2M3 29.5h1m1 0h5m2 0h1m2 0h1m2 0h1m2 0h1m1 0h2m1 0h1m2 0h7M9 30.5h1m1 0h2m3 0h1m3 0h1m1 0h1m1 0h2m3 0h1m3 0h3m1 0h1M1 31.5h7m1 0h1m1 0h1m1 0h2m2 0h1m5 0h1m5 0h1m1 0h1m1 0h2m1 0h2M1 32.5h1m5 0h1m4 0h3m1 0h2m1 0h1m2 0h4m1 0h3m3 0h2m2 0h1M1 33.5h1m1 0h3m1 0h1m2 0h1m5 0h3m2 0h1m1 0h2m2 0h1m1 0h6m2 0h1M1 34.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h5m1 0h1m7 0h1m1 0h1m1 0h1m1 0h1M1 35.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h5m10 0h6M1 36.5h1m5 0h1m7 0h2m4 0h1m1 0h5m2 0h2m3 0h1M1 37.5h7m2 0h2m1 0h1m3 0h1m3 0h2m1 0h3m6 0h1m1 0h3"/></svg></div>
+    <div class="kart__cta">Kamerayı doğrultun</div>
+    <div class="kart__url">akdag94.github.io/cepte-menu-demo/</div>
+    <p class="kart__not"><b>Önizleme</b> — Her yerden, her ağdan açılır. Uzaktakilere gösterilecek olan bu.</p>
+  </article>
+  <article class="kart">
+    <div class="kart__marka">ÖRNEK ET</div>
+    <div class="kart__baslik">Menü</div>
+    <div class="kart__qr"><svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 35 35" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h35v35H0z"/><path stroke="#111111" d="M1 1.5h7m2 0h2m3 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h7M1 2.5h1m5 0h1m2 0h1m1 0h2m2 0h1m2 0h4m1 0h1m2 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m2 0h6m2 0h1m1 0h1m2 0h2m2 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m2 0h2m1 0h9m1 0h3m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h5m4 0h2m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h1m2 0h2m1 0h4m2 0h3m2 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m2 0h1m1 0h5m6 0h1M3 9.5h2m2 0h5m2 0h2m5 0h2m1 0h4m1 0h1M1 10.5h6m3 0h2m2 0h3m4 0h2m1 0h1m1 0h2m3 0h1m1 0h1M2 11.5h1m1 0h2m1 0h1m4 0h1m2 0h3m2 0h1m3 0h4m4 0h2M3 12.5h1m2 0h1m1 0h1m4 0h1m1 0h3m3 0h1m2 0h2m2 0h2M2 13.5h2m3 0h1m4 0h2m1 0h1m3 0h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h2M1 14.5h2m1 0h2m7 0h2m1 0h1m5 0h2m1 0h1m4 0h2M1 15.5h3m1 0h6m1 0h1m4 0h1m3 0h2m2 0h2m2 0h3M1 16.5h6m3 0h3m1 0h1m1 0h3m1 0h1m1 0h2m3 0h1m2 0h3M3 17.5h3m1 0h3m1 0h1m1 0h2m2 0h1m4 0h1m1 0h2m1 0h6M1 18.5h2m1 0h1m3 0h1m6 0h1m4 0h2m1 0h2m1 0h4m1 0h3M3 19.5h2m2 0h1m1 0h1m4 0h7m1 0h1m3 0h3m2 0h2M1 20.5h3m1 0h1m2 0h2m1 0h1m2 0h1m1 0h1m2 0h1m3 0h1m4 0h1m3 0h2M5 21.5h1m1 0h5m5 0h1m1 0h2m1 0h1m2 0h1m1 0h2m1 0h2M1 22.5h3m2 0h1m2 0h4m1 0h4m1 0h3m3 0h1m4 0h2m1 0h1M5 23.5h3m1 0h1m2 0h1m3 0h1m1 0h2m2 0h4m1 0h1m1 0h1m2 0h2M2 24.5h1m3 0h1m3 0h1m4 0h2m2 0h1m3 0h1m2 0h1m1 0h1m1 0h1m1 0h1M1 25.5h1m1 0h2m1 0h4m4 0h2m1 0h1m2 0h2m1 0h1m1 0h5m2 0h1M9 26.5h1m1 0h5m1 0h6m1 0h2m3 0h1m1 0h1M1 27.5h7m1 0h3m2 0h1m1 0h7m1 0h2m1 0h1m1 0h1m1 0h1M1 28.5h1m5 0h1m2 0h1m1 0h3m3 0h2m1 0h1m2 0h2m3 0h5M1 29.5h1m1 0h3m1 0h1m2 0h1m1 0h2m6 0h1m2 0h7m1 0h2M1 30.5h1m1 0h3m1 0h1m1 0h2m4 0h2m1 0h3m1 0h4m2 0h1m1 0h1M1 31.5h1m1 0h3m1 0h1m1 0h3m2 0h1m2 0h1m1 0h3m2 0h1m1 0h2m2 0h2M1 32.5h1m5 0h1m4 0h2m1 0h1m2 0h5m2 0h1m1 0h1m5 0h1M1 33.5h7m3 0h1m2 0h1m1 0h1m4 0h1m2 0h1m1 0h6"/></svg></div>
+    <div class="kart__cta">Kamerayı doğrultun</div>
+    <div class="kart__url">menuburada.tr/orneket</div>
+    <p class="kart__not"><b>Canlı</b> — Restoranın gerçek adresi. Masaya asıl konacak olan.</p>
+  </article>
+  <article class="kart">
+    <div class="kart__marka">ÖRNEK ET</div>
+    <div class="kart__baslik">Menü</div>
+    <div class="kart__qr"><svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h31v31H0z"/><path stroke="#111111" d="M1 1.5h7m1 0h2m3 0h1m1 0h2m3 0h1m1 0h7M1 2.5h1m5 0h1m1 0h2m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m3 0h2m2 0h4m4 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h2m2 0h1m3 0h2m1 0h2m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h1m1 0h4m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h2m1 0h1m2 0h7m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 8.5h1m2 0h1m3 0h1M4 9.5h1m2 0h1m4 0h1m1 0h1m1 0h3m1 0h1m3 0h3m1 0h2M1 10.5h1m1 0h1m1 0h1m3 0h1m2 0h1m1 0h2m4 0h6m1 0h1m1 0h1M1 11.5h2m2 0h1m1 0h6m2 0h1m3 0h1m1 0h4m1 0h1m1 0h1M2 12.5h1m2 0h1m2 0h1m3 0h1m3 0h3m4 0h3m1 0h2M1 13.5h5m1 0h11m1 0h4m1 0h2m1 0h1M1 14.5h1m1 0h1m1 0h2m1 0h6m2 0h2m2 0h1m1 0h1m1 0h3m2 0h1M1 15.5h1m2 0h4m1 0h1m1 0h2m6 0h2m1 0h1m1 0h2m2 0h2M2 16.5h1m1 0h1m3 0h2m6 0h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1M3 17.5h1m1 0h4m1 0h1m3 0h2m1 0h4M2 18.5h1m8 0h2m1 0h1m2 0h1m2 0h3m1 0h1m1 0h4M1 19.5h1m1 0h8m5 0h4m2 0h5m1 0h2M4 20.5h1m3 0h1m1 0h1m2 0h2m3 0h2m4 0h3m1 0h2M1 21.5h1m1 0h2m1 0h3m2 0h3m1 0h2m4 0h5m2 0h2M9 22.5h1m1 0h2m3 0h3m1 0h2m3 0h1m2 0h2M1 23.5h7m2 0h1m2 0h2m5 0h2m1 0h1m1 0h3m1 0h1M1 24.5h1m5 0h1m2 0h2m3 0h1m3 0h3m3 0h1m1 0h3M1 25.5h1m1 0h3m1 0h1m2 0h1m1 0h5m2 0h1m1 0h6m2 0h1M1 26.5h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m2 0h2m1 0h3M1 27.5h1m1 0h3m1 0h1m2 0h1m2 0h1m2 0h1m1 0h1m3 0h1m1 0h4m1 0h1M1 28.5h1m5 0h1m4 0h2m1 0h1m1 0h1m2 0h1m2 0h2m3 0h1M1 29.5h7m4 0h4m3 0h1m3 0h1m1 0h1m2 0h1"/></svg></div>
+    <div class="kart__cta">Kamerayı doğrultun</div>
+    <div class="kart__url">10.0.0.125:8787/</div>
+    <p class="kart__not"><b>Yerel test</b> — Yalnızca bu bilgisayarla aynı ağdaki telefonlar açar ve sunucu (node serve.mjs) çalışıyor olmalı. IP değişirse bu kod ölür.</p>
+  </article>
+</body>
+</html>
